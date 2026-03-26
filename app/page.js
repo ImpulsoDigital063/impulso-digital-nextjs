@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CardServico from "@/components/CardServico";
+import Problema from "@/components/Problema";
 import ComoFunciona from "@/components/ComoFunciona";
 import Portfolio from "@/components/Portfolio";
 import Depoimentos from "@/components/Depoimentos";
@@ -13,6 +14,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <Problema />
       <CardServico />
       <ComoFunciona />
       <Portfolio />
