@@ -30,25 +30,42 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <div className="animate-fade-in">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-8">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm text-primary-light font-medium">
-                +200 clientes atendidos
+            {/* Badge urgência */}
+            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-8">
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              <span className="text-sm text-accent font-semibold">
+                Apenas 3 vagas disponíveis em abril
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-              Transforme sua{" "}
-              <span className="gradient-text">presença digital</span> em
-              resultados reais
+              Sites que vendem.{" "}
+              <span className="gradient-text">Resultados reais.</span>{" "}
+              Entrega em dias.
             </h1>
 
-            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-              Criamos sites profissionais, lojas online e estratégias digitais
-              que convertem visitantes em clientes. Rápido, acessível e com
-              resultados garantidos.
+            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+              Criamos landing pages, lojas online e sites institucionais que
+              convertem visitantes em clientes — com design profissional,
+              SEO e suporte inclusos.
             </p>
+
+            {/* Service chips */}
+            <div className="flex flex-wrap gap-2 mb-10">
+              {[
+                "Landing Page",
+                "Loja Online",
+                "Site Institucional",
+                "Consultoria",
+              ].map((s) => (
+                <span
+                  key={s}
+                  className="text-xs font-medium px-3 py-1.5 rounded-full bg-dark-card border border-dark-border text-gray-400"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="whatsapp-btn text-center justify-center">
@@ -56,16 +73,16 @@ export default function Hero() {
                 Falar no WhatsApp
               </a>
               <a href="#servicos" className="btn-outline text-center justify-center">
-                Ver Serviços
+                Ver Planos e Preços
               </a>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-14 pt-10 border-t border-dark-border">
               {[
-                { value: "200+", label: "Projetos" },
+                { value: "200+", label: "Projetos entregues" },
                 { value: "98%", label: "Satisfação" },
-                { value: "3x", label: "Mais vendas" },
+                { value: "7 dias", label: "Prazo médio" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-2xl md:text-3xl font-black gradient-text">

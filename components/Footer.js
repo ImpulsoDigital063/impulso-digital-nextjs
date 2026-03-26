@@ -4,8 +4,8 @@ const links = {
   Serviços: [
     { label: "Landing Page", href: "#servicos" },
     { label: "Loja Online", href: "#servicos" },
+    { label: "Site Institucional", href: "#servicos" },
     { label: "Consultoria Digital", href: "#servicos" },
-    { label: "Manutenção", href: "#servicos" },
   ],
   Empresa: [
     { label: "Sobre nós", href: "#" },

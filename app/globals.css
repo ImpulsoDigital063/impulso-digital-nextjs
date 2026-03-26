@@ -65,3 +65,22 @@ body {
 .accordion-content.open {
   max-height: 300px;
 }
+
+/* Focus outlines acessíveis */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Gradient border utility */
+.border-gradient {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Section transition */
+section {
+  position: relative;
+}

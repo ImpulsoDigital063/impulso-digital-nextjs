@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CardServico from "@/components/CardServico";
+import ComoFunciona from "@/components/ComoFunciona";
 import Portfolio from "@/components/Portfolio";
+import Depoimentos from "@/components/Depoimentos";
 import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
@@ -12,7 +14,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CardServico />
+      <ComoFunciona />
       <Portfolio />
+      <Depoimentos />
       <FAQ />
       <CTAFinal />
       <Footer />
