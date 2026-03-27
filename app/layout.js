@@ -1,6 +1,10 @@
 import "./globals.css";
 
 export const metadata = {
+  icons: {
+    icon: "/favicon.png",
+    apple: "/images/icon-256.png",
+  },
   title: "Impulso Digital — Transforme sua presença digital",
   description:
     "Criamos landing pages, lojas online e oferecemos consultoria digital para alavancar o seu negócio. Resultados reais a partir de R$299.",
@@ -37,7 +41,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>

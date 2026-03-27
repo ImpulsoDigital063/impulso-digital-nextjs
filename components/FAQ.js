@@ -112,7 +112,7 @@ export default function FAQ() {
             Não encontrou sua resposta?
           </p>
           <a
-            href="https://wa.me/5511999999999?text=Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os%20da%20Impulso%20Digital"
+            href="https://wa.me/5599992065961?text=Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os%20da%20Impulso%20Digital"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn"

@@ -1,0 +1,8 @@
+<svg width="320" height="100" viewBox="0 0 320 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="10" width="80" height="80" rx="18" fill="#ffffff"/>
+  <path d="M25 65 L55 30" stroke="#0a0a0a" stroke-width="8"/>
+  <path d="M42 30 H55 V43" stroke="#0a0a0a" stroke-width="8"/>
+  <text x="100" y="50" font-family="DM Sans" font-size="28" font-weight="700" fill="#ffffff">IMPULSO</text>
+  <line x1="100" y1="60" x2="300" y2="60" stroke="#ffffff"/>
+  <text x="100" y="80" font-family="DM Sans" font-size="14" fill="#ffffff">DIGITAL</text>
+</svg>

@@ -2,18 +2,10 @@ const pontos = [
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    texto: "Não tem um site profissional",
-  },
-  {
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
-    texto: "Não consegue transformar visitas em vendas",
+    texto: "Seu cliente pesquisa no Google e não te acha — encontra o concorrente",
   },
   {
     icon: (
@@ -21,15 +13,23 @@ const pontos = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
-    texto: "Depende apenas do Instagram",
+    texto: "Refém do algoritmo — quando o Instagram cai, suas vendas caem junto",
   },
   {
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
       </svg>
     ),
-    texto: "Perde clientes por falta de estrutura",
+    texto: "Passa credibilidade errada — cliente desconfia antes de comprar",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    texto: "Perde horas respondendo direct e WhatsApp que poderiam estar no automático",
   },
 ];
 
@@ -54,15 +54,15 @@ export default function Problema() {
 
           {/* Título */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
-            Seu negócio está{" "}
-            <span className="text-red-400">perdendo clientes</span>{" "}
-            todos os dias
+            Você trabalha duro.{" "}
+            <span className="text-red-400">O cliente não te acha.</span>
           </h2>
 
           {/* Subtexto */}
           <p className="text-gray-400 text-lg leading-relaxed mb-12">
-            A maioria dos negócios depende apenas do Instagram e não consegue
-            transformar visitas em vendas.
+            Não é falta de esforço. É falta de estrutura.{" "}
+            Todo dia, clientes prontos para comprar procuram o que você vende — e fecham com quem aparece primeiro.{" "}
+            <span className="text-white font-semibold">Esse alguém poderia ser você.</span>
           </p>
 
           {/* Lista de pontos */}
@@ -84,11 +84,9 @@ export default function Problema() {
 
           {/* Parágrafo final */}
           <p className="text-gray-500 text-base md:text-lg leading-relaxed border-t border-white/[0.06] pt-10">
-            Enquanto isso, outros negócios estão vendendo todos os dias com uma
-            estrutura bem definida.{" "}
+            A virada não acontece quando você trabalha mais.{" "}
             <span className="text-white font-semibold">
-              A diferença não está no produto, está na forma como ele é
-              apresentado.
+              Acontece quando você para de depender do improviso e começa a ter uma estrutura que vende por você.
             </span>
           </p>
 

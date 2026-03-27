@@ -1,7 +1,7 @@
 "use client";
 
 const WHATSAPP_URL =
-  "https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20iniciar%20meu%20projeto%20com%20a%20Impulso%20Digital.";
+  "https://wa.me/5599992065961?text=Ol%C3%A1!%20Quero%20iniciar%20meu%20projeto%20com%20a%20Impulso%20Digital.";
 
 const etapas = [
   {
@@ -67,15 +67,17 @@ export default function ComoFunciona() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">
-            Como Funciona
-          </span>
+          <div className="flex items-center justify-center gap-2 mb-1">
+            <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Como Funciona</span>
+            <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
+          </div>
           <h2 className="section-title mt-3">
-            Do zero ao ar em{" "}
-            <span className="gradient-text">4 passos simples</span>
+            Do zero ao online{" "}
+            <span className="gradient-text">sem enrolação</span>
           </h2>
           <p className="section-subtitle">
-            Um processo transparente, sem burocracia, focado em entregar resultado no menor tempo possível.
+            Um processo direto e transparente, onde você acompanha cada etapa e recebe um projeto pronto para vender.
           </p>
         </div>
 

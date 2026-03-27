@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 56" fill="none">
+  <defs>
+    <linearGradient id="iconGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="45%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+    <linearGradient id="textGradImpulso" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="textGradDigital" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="iconShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Sombra do ícone -->
+  <rect x="5" y="9" width="38" height="40" rx="9" fill="#000000" opacity="0.35" transform="skewY(2)"/>
+
+  <!-- Ícone principal — 40×42px, alinhado ao bloco de texto -->
+  <rect x="2" y="5" width="40" height="42" rx="9" fill="url(#iconGrad)" filter="url(#iconShadow)"/>
+
+  <!-- Highlight superior -->
+  <rect x="3" y="6" width="38" height="12" rx="8" fill="white" opacity="0.13"/>
+
+  <!-- Seta: sombra -->
+  <line x1="13" y1="39" x2="32" y2="15" stroke="#1a3a1a" stroke-width="4" stroke-linecap="round" opacity="0.45" transform="translate(1,1)"/>
+  <polyline points="23,15 32,15 32,25" stroke="#1a3a1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.45" transform="translate(1,1)"/>
+
+  <!-- Seta: branco claro -->
+  <line x1="13" y1="39" x2="32" y2="15" stroke="#f0fdf4" stroke-width="3.5" stroke-linecap="round"/>
+  <polyline points="23,15 32,15 32,25" stroke="#f0fdf4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- IMPULSO: camadas 3D -->
+  <text x="52" y="30" font-family="'DM Sans','Arial Black',sans-serif" font-size="22" font-weight="800" fill="#1a3a1a" letter-spacing="1.5">IMPULSO</text>
+  <text x="51.5" y="29.5" font-family="'DM Sans','Arial Black',sans-serif" font-size="22" font-weight="800" fill="#166534" letter-spacing="1.5">IMPULSO</text>
+  <text x="50" y="28" font-family="'DM Sans','Arial Black',sans-serif" font-size="22" font-weight="800" fill="url(#textGradImpulso)" letter-spacing="1.5">IMPULSO</text>
+
+  <!-- Linha separadora -->
+  <line x1="50" y1="34" x2="164" y2="34" stroke="#16a34a" stroke-width="0.9"/>
+
+  <!-- DIGITAL: camadas 3D — centralizado entre x=50 e x=164 → centro x=107 -->
+  <text text-anchor="middle" x="107" y="49" font-family="'DM Sans','Arial',sans-serif" font-size="12" font-weight="700" fill="#052e16" letter-spacing="5">DIGITAL</text>
+  <text text-anchor="middle" x="106.5" y="48.5" font-family="'DM Sans','Arial',sans-serif" font-size="12" font-weight="700" fill="#15803d" letter-spacing="5">DIGITAL</text>
+  <text text-anchor="middle" x="106" y="48" font-family="'DM Sans','Arial',sans-serif" font-size="12" font-weight="700" fill="url(#textGradDigital)" letter-spacing="5">DIGITAL</text>
+</svg>

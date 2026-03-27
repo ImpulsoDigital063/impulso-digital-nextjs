@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais.";
+  "https://wa.me/5599992065961?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais.";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,13 +34,8 @@ export default function Navbar() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-black text-sm">ID</span>
-            </div>
-            <span className="text-white font-bold text-lg">
-              Impulso<span className="text-primary-light">Digital</span>
-            </span>
+          <a href="#" className="flex items-center">
+            <img src="/images/logo-navbar.svg" alt="Impulso Digital" style={{ height: "44px" }} />
           </a>
 
           {/* Desktop nav */}

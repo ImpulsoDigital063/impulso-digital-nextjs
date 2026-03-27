@@ -1,7 +1,7 @@
 "use client";
 
 const WHATSAPP_URL =
-  "https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20transformar%20minha%20presen%C3%A7a%20digital%20com%20a%20Impulso%20Digital!";
+  "https://wa.me/5599992065961?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20estruturar%20meu%20neg%C3%B3cio%20para%20vender%20todos%20os%20dias.%20Pode%20me%20ajudar%3F";
 
 export default function CTAFinal() {
   return (
@@ -21,20 +21,19 @@ export default function CTAFinal() {
         <div className="inline-flex items-center gap-3 bg-red-500/10 border border-red-500/20 rounded-full px-5 py-2.5 mb-10">
           <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse flex-shrink-0" />
           <span className="text-red-400 text-sm font-semibold">
-            Atenção: apenas 3 vagas disponíveis para novos projetos em abril
+            Vagas limitadas: apenas 3 projetos novos em abril — 1 já reservada
           </span>
         </div>
 
         {/* Headline */}
         <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-          Pronto para{" "}
-          <span className="gradient-text">crescer de verdade?</span>
+          Pronto para dar o seu{" "}
+          <span className="gradient-text">impulso digital?</span>
         </h2>
 
         <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Junte-se a mais de 200 empreendedores que já transformaram sua
-          presença digital com a Impulso Digital. Seu próximo passo começa com
-          uma conversa — sem compromisso.
+          Mais de 60 empreendedores já confiaram na Impulso Digital para existir online.{" "}
+          <span className="text-white font-semibold">O nosso melhor trabalho é sempre o próximo — e o próximo pode ser o seu.</span>
         </p>
 
         {/* CTA Buttons */}
@@ -46,10 +45,10 @@ export default function CTAFinal() {
             className="whatsapp-btn text-base px-10"
           >
             <WhatsAppIcon />
-            Falar com especialista agora
+            Quero estrutura para vender todos os dias
           </a>
           <a href="#servicos" className="btn-outline text-base px-10">
-            Ver planos e preços
+            Ver quanto custa
           </a>
         </div>
 
@@ -59,10 +58,18 @@ export default function CTAFinal() {
             {
               icon: (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               ),
-              text: "Sem fidelidade",
+              text: "Hospedagem inclusa",
+            },
+            {
+              icon: (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                </svg>
+              ),
+              text: "Sem mensalidades escondidas",
             },
             {
               icon: (
@@ -78,15 +85,7 @@ export default function CTAFinal() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               ),
-              text: "Resultados garantidos",
-            },
-            {
-              icon: (
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                </svg>
-              ),
-              text: "Suporte humanizado",
+              text: "Estrutura pronta para vender",
             },
           ].map((item) => (
             <div key={item.text} className="flex items-center gap-2 text-gray-500 text-sm">

@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import CardServico from "@/components/CardServico";
+import ParceirosBanner from "@/components/ParceirosBanner";
 import Problema from "@/components/Problema";
+import ParaQuemE from "@/components/ParaQuemE";
+import Numeros from "@/components/Numeros";
+import CardServico from "@/components/CardServico";
 import ComoFunciona from "@/components/ComoFunciona";
 import Portfolio from "@/components/Portfolio";
+import LogosClientes from "@/components/LogosClientes";
 import Depoimentos from "@/components/Depoimentos";
+import SobreEduardo from "@/components/SobreEduardo";
 import FAQ from "@/components/FAQ";
+import MPNPromo from "@/components/MPNPromo";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 
@@ -14,18 +20,24 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <ParceirosBanner />
       <Problema />
+      <ParaQuemE />
+      <Numeros />
       <CardServico />
       <ComoFunciona />
       <Portfolio />
+      <LogosClientes />
       <Depoimentos />
+      <SobreEduardo />
       <FAQ />
+      <MPNPromo />
       <CTAFinal />
       <Footer />
 
       {/* WhatsApp floating button */}
       <a
-        href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Impulso%20Digital."
+        href="https://wa.me/5599992065961?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Impulso%20Digital."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"

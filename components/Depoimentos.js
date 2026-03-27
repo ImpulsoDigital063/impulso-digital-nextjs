@@ -34,9 +34,9 @@ const depoimentos = [
 ];
 
 const trustStats = [
-  { value: "200+", label: "Clientes atendidos" },
-  { value: "4.9/5", label: "Avaliação média" },
-  { value: "98%", label: "Satisfação" },
+  { value: "60+", label: "Negócios impulsionados" },
+  { value: "7 dias", label: "Média de entrega" },
+  { value: "Palmas-TO", label: "Base de operação" },
   { value: "30 dias", label: "Suporte pós-entrega" },
 ];
 
@@ -61,8 +61,8 @@ export default function Depoimentos() {
             <span className="gradient-text">clientes dizem</span>
           </h2>
           <p className="section-subtitle">
-            Mais de 200 empreendedores já transformaram seus negócios conosco.
-            Veja histórias reais de quem já deu o próximo passo.
+            Mais de 60 empreendedores já deram o impulso digital que faltava.
+            Veja histórias reais de quem deu o próximo passo.
           </p>
         </div>
 

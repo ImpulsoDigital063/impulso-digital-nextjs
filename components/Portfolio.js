@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 function WhatsAppIcon() {
   return (
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -11,53 +13,134 @@ function WhatsAppIcon() {
 const cases = [
   {
     id: 1,
-    categoria: "Landing Page",
-    titulo: "Clínica Estética Bella Vita",
+    categoria: "Loja Shopify",
+    titulo: "GB Nutrition",
     descricao:
-      "Landing page de alta conversão para captação de leads de procedimentos estéticos com agendamento online integrado.",
-    resultado: "+320% em agendamentos",
+      "Loja Shopify com estrutura completa de vendas: catálogo otimizado, checkout integrado via Yampi e foco total em conversão mobile.",
+    resultado: "Loja no ar e vendendo em 7 dias",
     metricas: [
-      { label: "Taxa de conversão", valor: "8,4%" },
-      { label: "Leads/mês", valor: "240+" },
-      { label: "ROI", valor: "12x" },
+      { label: "Prazo de entrega", valor: "7 dias" },
+      { label: "Plataforma", valor: "Shopify" },
+      { label: "Checkout", valor: "Yampi" },
     ],
-    cor: "#1d4ed8",
-    emoji: "💆‍♀️",
-    tag: "Saúde & Estética",
+    cor: "#10b981",
+    tag: "Suplementos",
+    imagens: [
+      "/cases/gbnutrition-1.png",
+      "/cases/gbnutrition-2.png",
+    ],
   },
   {
     id: 2,
-    categoria: "Loja Online",
-    titulo: "Empório das Especiarias",
+    categoria: "Landing Page",
+    titulo: "EV Suplementos Injetáveis",
     descricao:
-      "E-commerce completo para venda de temperos e especiarias artesanais, com integração de pagamento e logística.",
-    resultado: "R$ 45k em vendas no 1º mês",
+      "Landing page de alta conversão para captação de clientes via WhatsApp. Estrutura focada em gerar contato direto e fechar vendas.",
+    resultado: "Canal de captação ativo via WhatsApp",
     metricas: [
-      { label: "Pedidos/mês", valor: "380+" },
-      { label: "Ticket médio", valor: "R$ 118" },
-      { label: "Retorno", valor: "7x" },
+      { label: "Prazo de entrega", valor: "5 dias" },
+      { label: "Stack", valor: "Next.js" },
+      { label: "CTA", valor: "WhatsApp" },
     ],
     cor: "#ff6b35",
-    emoji: "🌶️",
-    tag: "Alimentação",
-  },
-  {
-    id: 3,
-    categoria: "Consultoria + Site",
-    titulo: "Arquiteto João Menezes",
-    descricao:
-      "Estratégia digital completa com site portfólio profissional e presença nas redes sociais para captação de projetos premium.",
-    resultado: "+5 contratos em 60 dias",
-    metricas: [
-      { label: "Visitas/mês", valor: "2.800+" },
-      { label: "Projetos fechados", valor: "5" },
-      { label: "Valor médio", valor: "R$ 18k" },
+    tag: "Suplementos",
+    imagens: [
+      "/cases/evsuplementos-1.png",
+      "/cases/evsuplementos-2.png",
     ],
-    cor: "#10b981",
-    emoji: "🏛️",
-    tag: "Arquitetura",
   },
 ];
+
+function CaseCard({ c }) {
+  const [activeImg, setActiveImg] = useState(0);
+
+  const prev = () => setActiveImg((i) => (i === 0 ? c.imagens.length - 1 : i - 1));
+  const next = () => setActiveImg((i) => (i === c.imagens.length - 1 ? 0 : i + 1));
+
+  return (
+    <div
+      className="bg-dark border border-dark-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group"
+    >
+      {/* Image gallery */}
+      <div className="relative h-56 overflow-hidden bg-dark-card">
+        <img
+          src={c.imagens[activeImg]}
+          alt={`${c.titulo} — imagem ${activeImg + 1}`}
+          className="w-full h-full object-cover transition-opacity duration-300"
+        />
+
+        {/* Prev / Next */}
+        <button
+          onClick={prev}
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-black/50 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-colors"
+          aria-label="Imagem anterior"
+        >
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-black/50 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-colors"
+          aria-label="Próxima imagem"
+        >
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* Dot indicators */}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+          {c.imagens.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveImg(i)}
+              className={`w-1.5 h-1.5 rounded-full transition-all ${i === activeImg ? "bg-white scale-125" : "bg-white/40"}`}
+              aria-label={`Ir para imagem ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Tags */}
+        <div
+          className="absolute top-3 left-3 text-xs font-bold px-3 py-1.5 rounded-full"
+          style={{ backgroundColor: c.cor + "33", color: c.cor, border: `1px solid ${c.cor}55` }}
+        >
+          {c.tag}
+        </div>
+        <div className="absolute top-3 right-3 text-xs font-medium px-3 py-1.5 rounded-full bg-dark/80 text-gray-300 backdrop-blur-sm">
+          {c.categoria}
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6">
+        <h3 className="text-lg font-bold text-white mb-2">{c.titulo}</h3>
+        <p className="text-gray-400 text-sm leading-relaxed mb-5">{c.descricao}</p>
+
+        {/* Result highlight */}
+        <div
+          className="rounded-xl px-4 py-3 mb-5 text-center"
+          style={{ backgroundColor: c.cor + "15", border: `1px solid ${c.cor}30` }}
+        >
+          <span className="text-sm font-bold" style={{ color: c.cor }}>
+            {c.resultado}
+          </span>
+        </div>
+
+        {/* Metrics */}
+        <div className="grid grid-cols-3 gap-3">
+          {c.metricas.map((m) => (
+            <div key={m.label} className="text-center">
+              <div className="text-white font-bold text-sm">{m.valor}</div>
+              <div className="text-gray-600 text-xs mt-0.5">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Portfolio() {
   return (
@@ -68,94 +151,40 @@ export default function Portfolio() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">
-            Cases de Sucesso
-          </span>
+          <div className="flex items-center justify-center gap-2 mb-1">
+            <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Cases de Sucesso</span>
+            <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
+          </div>
           <h2 className="section-title mt-3">
-            Resultados reais de{" "}
-            <span className="gradient-text">clientes reais</span>
+            Negócios que{" "}
+            <span className="gradient-text">deram o impulso.</span>
           </h2>
           <p className="section-subtitle">
-            Cada projeto é único. Conheça algumas histórias de transformação
-            digital que ajudamos a construir.
+            Casos reais de empreendedores que pararam de depender do improviso.{" "}
+            <span className="text-white font-semibold">O próximo pode ser o seu.</span>
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {cases.map((c) => (
-            <div
-              key={c.id}
-              className="bg-dark border border-dark-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group"
-              style={{ "--card-color": c.cor }}
-            >
-              {/* Image area */}
-              <div
-                className="relative h-48 flex items-center justify-center overflow-hidden"
-                style={{
-                  background: `linear-gradient(135deg, ${c.cor}22, ${c.cor}44)`,
-                  borderBottom: `1px solid ${c.cor}33`,
-                }}
-              >
-                <span className="text-7xl select-none group-hover:scale-110 transition-transform duration-300">
-                  {c.emoji}
-                </span>
-                <div
-                  className="absolute top-4 left-4 text-xs font-bold px-3 py-1.5 rounded-full"
-                  style={{
-                    backgroundColor: c.cor + "33",
-                    color: c.cor,
-                    border: `1px solid ${c.cor}55`,
-                  }}
-                >
-                  {c.tag}
-                </div>
-                <div
-                  className="absolute top-4 right-4 text-xs font-medium px-3 py-1.5 rounded-full bg-dark/80 text-gray-300 backdrop-blur-sm"
-                >
-                  {c.categoria}
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-white mb-2">{c.titulo}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">
-                  {c.descricao}
-                </p>
-
-                {/* Result highlight */}
-                <div
-                  className="rounded-xl px-4 py-3 mb-5 text-center"
-                  style={{ backgroundColor: c.cor + "15", border: `1px solid ${c.cor}30` }}
-                >
-                  <span className="text-sm font-bold" style={{ color: c.cor }}>
-                    {c.resultado}
-                  </span>
-                </div>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-3 gap-3">
-                  {c.metricas.map((m) => (
-                    <div key={m.label} className="text-center">
-                      <div className="text-white font-bold text-sm">{m.valor}</div>
-                      <div className="text-gray-600 text-xs mt-0.5">{m.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <CaseCard key={c.id} c={c} />
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center mt-14">
-          <p className="text-gray-500 mb-6 text-sm">
-            Quer ver mais cases ou conversar com algum cliente nosso?
-          </p>
+          <div className="inline-flex items-center gap-3 bg-dark border border-dark-border rounded-2xl px-8 py-5 mb-8">
+            <span className="text-3xl font-black gradient-text">60+</span>
+            <div className="text-left">
+              <p className="text-white text-sm font-semibold">negócios já deram o impulso</p>
+              <p className="text-gray-500 text-xs">o próximo pode ser o seu</p>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/5511999999999?text=Quero%20ver%20mais%20cases%20da%20Impulso%20Digital"
+              href="https://wa.me/5599992065961?text=Quero%20ver%20mais%20cases%20da%20Impulso%20Digital"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
@@ -163,7 +192,7 @@ export default function Portfolio() {
               Ver mais projetos
             </a>
             <a
-              href="https://wa.me/5511999999999?text=Quero%20iniciar%20meu%20projeto"
+              href="https://wa.me/5599992065961?text=Quero%20iniciar%20meu%20projeto"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-btn"
