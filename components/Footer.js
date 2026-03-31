@@ -13,6 +13,10 @@ const links = {
     { label: "MPN-On", href: "https://meuprimeironegocio.online", target: "_blank" },
     { label: "FAQ", href: "#faq" },
   ],
+  Recursos: [
+    { label: "Blog", href: "/blog" },
+    { label: "MPN-On — Curso Shopify", href: "https://meuprimeironegocio.online", target: "_blank" },
+  ],
   Contato: [
     { label: "WhatsApp", href: WHATSAPP_URL },
     { label: "Instagram", href: "https://instagram.com/edubarrosch", target: "_blank" },
@@ -28,9 +32,9 @@ export default function Footer() {
     <footer className="bg-dark-card border-t border-dark-border">
       {/* Main footer */}
       <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <div className="mb-5">
               <img src="/images/logo-navbar.svg" alt="Impulso Digital" className="h-10 w-auto" />
             </div>
