@@ -65,12 +65,22 @@ export default function Navbar() {
             WhatsApp
           </a>
 
-          {/* Mobile burger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 text-gray-400 hover:text-white"
-            aria-label="Menu"
-          >
+          {/* Mobile: Blog button + burger */}
+          <div className="flex md:hidden items-center gap-2">
+            <a
+              href="/blog"
+              className="inline-flex items-center gap-1.5 bg-accent/10 hover:bg-accent/20 text-accent border border-accent/30 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Blog
+            </a>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="p-2 text-gray-400 hover:text-white"
+              aria-label="Menu"
+            >
             {menuOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -80,13 +90,14 @@ export default function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
-          </button>
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden border-t border-dark-border py-4 bg-dark/95 backdrop-blur-md">
-            {navLinks.map((link) => (
+            {navLinks.filter((link) => link.label !== "Blog").map((link) => (
               <a
                 key={link.label}
                 href={link.href}
