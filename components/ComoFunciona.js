@@ -1,62 +1,65 @@
 "use client";
 
 const WHATSAPP_URL =
-  "https://wa.me/5599992065961?text=Ol%C3%A1!%20Quero%20iniciar%20meu%20projeto%20com%20a%20Impulso%20Digital.";
+  "https://wa.me/556392920080?text=Ol%C3%A1!%20Quero%20iniciar%20meu%20projeto%20com%20a%20Impulso%20Digital.";
 
 const etapas = [
   {
-    numero: "01",
+    marco: "Dia 0-1",
+    titulo: "Alinhamento profundo",
+    descricao: "Questionário estruturado, call opcional de 30-40min e PDF com plano de negócio personalizado. Tudo antes de eu escrever uma linha de código.",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
-    titulo: "Primeiro Contato",
-    descricao:
-      "Você nos manda uma mensagem pelo WhatsApp. Em até 2h, um especialista entra em contato para entender o seu negócio e suas metas.",
-    destaque: false,
   },
   {
-    numero: "02",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
-    titulo: "Briefing & Proposta",
-    descricao:
-      "Coletamos todas as informações do projeto e enviamos uma proposta personalizada sem compromisso, com prazo e valor fechados.",
-    destaque: false,
-  },
-  {
-    numero: "03",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
-    titulo: "Desenvolvimento",
-    descricao:
-      "Nossa equipe cria seu projeto com design exclusivo. Você acompanha o progresso e aprova cada etapa antes da publicação.",
+    marco: "Dia 2-3",
+    titulo: "Prévia visual",
+    descricao: "Você recebe paleta, tipografia e o mapa de cada página antes da gente construir. Se não for a cara do seu negócio, devolvo 100%.",
     destaque: true,
-  },
-  {
-    numero: "04",
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
       </svg>
     ),
-    titulo: "Entrega & Suporte",
-    descricao:
-      "Publicamos seu site, entregamos os acessos e ficamos ao seu lado por 30 dias garantindo que tudo funcione perfeitamente.",
-    destaque: false,
+  },
+  {
+    marco: "Dia 4 a 7",
+    titulo: "Construção",
+    descricao: "Site tomando forma com o que você aprovou. Você acompanha no link de prévia e pede ajustes com o projeto vivo, sem achismo.",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    ),
+  },
+  {
+    marco: "Dia 7",
+    titulo: "No ar",
+    descricao: "Site publicado, domínio configurado e acessos entregues no seu nome. A estrutura é sua, pra sempre, sem mensalidade de plataforma.",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+  },
+  {
+    marco: "+30 dias",
+    titulo: "Suporte pós-entrega",
+    descricao: "Ajuste fino, dúvidas, trocas de texto e monitoramento. 30 dias com a gente do seu lado pra garantir que o site está vendendo.",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
   },
 ];
 
 export default function ComoFunciona() {
   return (
-    <section id="como-funciona" className="py-24 bg-dark-card relative overflow-hidden">
+    <section id="como-funciona" className="py-16 md:py-24 bg-dark-card relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
@@ -64,65 +67,119 @@ export default function ComoFunciona() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-1">
-            <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
-            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Como Funciona</span>
-            <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
-          </div>
-          <h2 className="section-title mt-3">
-            Do zero ao online{" "}
-            <span className="gradient-text">sem enrolação</span>
+        <div className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">
+          <span className="sf inline-block text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 md:mb-4">
+            A trilha do seu projeto
+          </span>
+          <h2 className="sf text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 md:mb-6">
+            Do alinhamento ao ar em{" "}
+            <span className="gradient-text-hybrid">7 dias</span>
+            <span className="text-white">, com 30 dias de suporte.</span>
           </h2>
-          <p className="section-subtitle">
-            Um processo direto e transparente, onde você acompanha cada etapa e recebe um projeto pronto para vender.
+          <p className="sf text-gray-400 text-base sm:text-lg leading-relaxed">
+            Cada etapa tem prazo. Você sabe o que vai acontecer amanhã e não precisa caçar ninguém pra saber em que pé está.
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto relative">
-          {/* Connector line */}
-          <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10" />
+        {/* Timeline */}
+        <div className="max-w-5xl mx-auto">
+          {/* ─── MOBILE: timeline vertical ─── */}
+          <div className="md:hidden relative">
+            {/* Linha vertical */}
+            <div className="absolute left-[22px] top-3 bottom-3 w-px bg-gradient-to-b from-primary/10 via-primary/40 to-primary/10" />
 
-          {etapas.map((etapa, idx) => (
-            <div key={etapa.numero} className="relative flex flex-col items-center text-center group">
-              {/* Step circle */}
-              <div
-                className={`relative w-20 h-20 rounded-2xl flex items-center justify-center mb-6 z-10 transition-all duration-300 group-hover:scale-110 ${
-                  etapa.destaque
-                    ? "bg-gradient-to-br from-primary to-primary-light shadow-xl shadow-primary/30 text-white"
-                    : "bg-dark border border-dark-border text-gray-400 group-hover:border-primary/50 group-hover:text-primary-light group-hover:bg-primary/10"
-                }`}
-              >
-                {etapa.icon}
-                <div
-                  className={`absolute -top-2 -right-2 w-6 h-6 rounded-full text-[10px] font-black flex items-center justify-center ${
-                    etapa.destaque ? "bg-accent text-white" : "bg-dark-border text-gray-500"
-                  }`}
-                >
-                  {idx + 1}
+            <div className="flex flex-col gap-5">
+              {etapas.map((e) => (
+                <div key={e.titulo} className="sf relative flex items-start gap-4">
+                  {/* Bolha com ícone */}
+                  <div className={`relative z-10 flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center ${
+                    e.destaque
+                      ? "bg-gradient-to-br from-primary to-primary-light text-white shadow-lg shadow-primary/30"
+                      : "bg-dark border border-dark-border text-primary-light"
+                  }`}>
+                    <div className="scale-75">{e.icon}</div>
+                  </div>
+
+                  {/* Card */}
+                  <div className={`flex-1 rounded-xl p-4 border ${
+                    e.destaque
+                      ? "bg-primary/5 border-primary/30"
+                      : "bg-dark border-dark-border"
+                  }`}>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className={`text-[10px] font-bold uppercase tracking-widest ${e.destaque ? "text-primary-light" : "text-primary/70"}`}>
+                        {e.marco}
+                      </span>
+                      {e.destaque && (
+                        <span className="text-[9px] font-bold uppercase tracking-wider bg-primary/20 text-primary-light px-1.5 py-0.5 rounded">
+                          Ponto-chave
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-white font-bold text-sm mb-1.5 leading-snug">{e.titulo}</h3>
+                    <p className="text-gray-500 text-xs leading-relaxed">{e.descricao}</p>
+                  </div>
                 </div>
-              </div>
-
-              <h3 className="text-white font-bold text-base mb-3">{etapa.titulo}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{etapa.descricao}</p>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* ─── DESKTOP: timeline horizontal ─── */}
+          <div className="hidden md:block relative">
+            {/* Linha horizontal */}
+            <div className="absolute top-10 left-[10%] right-[10%] h-px bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10" />
+
+            <div className="grid grid-cols-5 gap-5">
+              {etapas.map((e) => (
+                <div key={e.titulo} className="sf relative flex flex-col items-center text-center group">
+                  {/* Bolha */}
+                  <div className={`relative z-10 w-20 h-20 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 ${
+                    e.destaque
+                      ? "bg-gradient-to-br from-primary to-primary-light text-white shadow-xl shadow-primary/30"
+                      : "bg-dark border border-dark-border text-primary-light group-hover:border-primary/50"
+                  }`}>
+                    {e.icon}
+                  </div>
+
+                  {/* Marco temporal */}
+                  <span className={`text-[11px] font-bold uppercase tracking-widest mb-1.5 ${e.destaque ? "text-primary-light" : "text-primary/70"}`}>
+                    {e.marco}
+                  </span>
+
+                  {/* Título */}
+                  <h3 className="text-white font-bold text-base mb-2 leading-snug">
+                    {e.titulo}
+                    {e.destaque && (
+                      <span className="block text-[9px] font-bold uppercase tracking-wider text-primary-light mt-1">
+                        Ponto-chave
+                      </span>
+                    )}
+                  </h3>
+
+                  {/* Descrição */}
+                  <p className="text-gray-500 text-xs leading-relaxed max-w-[18ch]">{e.descricao}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-14">
+        <div className="sf text-center mt-12 md:mt-16">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="whatsapp-btn"
+            className="whatsapp-btn justify-center"
           >
             <WhatsAppIcon />
             Iniciar meu projeto agora
           </a>
+          <p className="text-gray-600 text-xs sm:text-sm mt-4">
+            Resposta em até 2h no horário comercial
+          </p>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 export default function MPNPromo() {
   return (
-    <section className="py-24 bg-dark relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Glow de fundo */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-3xl" />
@@ -8,30 +8,30 @@ export default function MPNPromo() {
 
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
 
           {/* Label */}
-          <div className="text-center mb-10">
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary border border-primary/20 bg-primary/5 px-4 py-2 rounded-full mb-5">
+          <div className="text-center mb-8 md:mb-10">
+            <span className="sf inline-block text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-primary border border-primary/20 bg-primary/5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 md:mb-5">
               Para quem quer aprender a fazer
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
+            <h2 className="sf text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-3 md:mb-4">
               Prefere criar as lojas{" "}
-              <span className="gradient-text">você mesmo?</span>
+              <span className="gradient-text-hybrid">você mesmo?</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="sf text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               O <span className="text-white font-bold">MPN-On</span> é o curso que ensina a criar lojas Shopify profissionais do zero — sem programar, em 29 aulas práticas. O mesmo método que a Impulso usa para entregar lojas em 7 dias.
             </p>
           </div>
 
           {/* Card principal */}
-          <div className="rounded-3xl border border-dark-border bg-dark-card overflow-hidden">
+          <div className="sf rounded-3xl border border-dark-border bg-dark-card overflow-hidden">
             {/* Faixa top */}
             <div className="h-1 w-full bg-gradient-to-r from-primary via-primary-light to-primary/40" />
 
-            <div className="p-8 md:p-10">
-              <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="p-5 sm:p-7 md:p-10">
+              <div className="grid md:grid-cols-2 gap-7 md:gap-10 items-center">
 
                 {/* Esquerda — o que está incluso */}
                 <div>
@@ -119,7 +119,7 @@ export default function MPNPromo() {
           <p className="text-center text-gray-600 text-sm mt-8">
             Prefere que a gente faça por você?{" "}
             <a
-              href="https://wa.me/5599992065961?text=Quero%20contratar%20a%20Impulso%20Digital"
+              href="https://wa.me/556392920080?text=Quero%20contratar%20a%20Impulso%20Digital"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary-light underline underline-offset-2 transition-colors"

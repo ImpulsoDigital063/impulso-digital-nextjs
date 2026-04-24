@@ -11,8 +11,9 @@ export default function StarField() {
     let animationId;
     let stars = [];
 
-    const STAR_COUNT = 110;
-    const MAX_DIST = 140;
+    const isMobile = window.innerWidth < 640;
+    const STAR_COUNT = isMobile ? 55 : 110;
+    const MAX_DIST = isMobile ? 100 : 140;
     const SPEED = 0.25;
 
     function resize() {
@@ -100,7 +101,7 @@ export default function StarField() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: 0, opacity: 0.55 }}
+      style={{ zIndex: 0, opacity: 0.6 }}
     />
   );
 }

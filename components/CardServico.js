@@ -1,6 +1,6 @@
 "use client";
 
-const WHATSAPP_NUMBER = "5599992065961";
+const WHATSAPP_NUMBER = "556392920080";
 
 function buildWhatsApp(servico) {
   const msg = encodeURIComponent(
@@ -129,8 +129,8 @@ const servicos = [
     resultadoNum: "1 call",
     resultadoLabel: "já com o diagnóstico pronto",
     descricao: "Antes da call, já estudei seu negócio. Analiso seu Instagram, sua comunicação, seus pontos cegos — e chego com soluções, não com perguntas.",
-    preco: "R$ 299",
-    precoOriginal: "R$ 799",
+    preco: "R$ 499",
+    precoOriginal: "R$ 999",
     destaque: false,
     bonus: "Vagas se esgotando",
     bonusDesc: "Oferta por tempo limitado",
@@ -148,31 +148,31 @@ const servicos = [
 
 export default function CardServico() {
   return (
-    <section id="servicos" className="py-24 bg-dark relative overflow-hidden">
+    <section id="servicos" className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-5 md:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="sf text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest">
             O impulso certo para o seu momento
           </span>
-          <h2 className="section-title mt-3">
+          <h2 className="sf section-title mt-3">
             Escolha sua estrutura.{" "}
-            <span className="gradient-text">A gente coloca no ar.</span>
+            <span className="gradient-text-hybrid">A gente coloca no ar.</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="sf section-subtitle">
             Cada negócio tem uma necessidade diferente. A gente ajuda você a identificar qual estrutura faz sentido agora —{" "}
             <span className="text-white font-semibold">e entrega rápido, sem enrolação.</span>
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 max-w-6xl mx-auto">
           {servicos.map((s) => (
             <div
               key={s.titulo}
-              className={`relative rounded-2xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden ${
+              className={`sf relative rounded-2xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col overflow-hidden ${
                 s.destaque
                   ? "border-accent/40 shadow-xl shadow-accent/10"
                   : "border-dark-border hover:border-primary/30 hover:shadow-primary/5"
@@ -181,7 +181,7 @@ export default function CardServico() {
               {/* Card top gradient strip */}
               <div className={`h-1 w-full ${s.destaque ? "bg-gradient-to-r from-accent to-accent/50" : "bg-gradient-to-r from-primary/40 to-transparent"}`} />
 
-              <div className="p-7 flex flex-col flex-1 bg-dark-card">
+              <div className="p-5 sm:p-6 md:p-7 flex flex-col flex-1 bg-dark-card">
                 {/* Badge */}
                 <div className="flex items-center justify-between mb-6">
                   <span className={`text-[11px] font-bold px-3 py-1 rounded-full border ${s.badgeClass}`}>

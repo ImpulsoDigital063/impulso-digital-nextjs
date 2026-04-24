@@ -251,7 +251,7 @@ A partir de maio, os valores da Impulso Digital serão reajustados. Se você est
 
 Pagamento: 50% na entrada + 50% na entrega. **30 dias de suporte gratuito incluídos.**
 
-[**Solicitar orçamento grátis →**](https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20guia%20de%20pre%C3%A7os%20e%20quero%20um%20or%C3%A7amento.)
+[**Solicitar orçamento grátis →**](https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20guia%20de%20pre%C3%A7os%20e%20quero%20um%20or%C3%A7amento.)
 
 ---
 
@@ -288,4 +288,4 @@ O site certo, com a estratégia certa, recupera o investimento em semanas — n�
 
 Não deixe seu concorrente sair na frente enquanto você ainda está em dúvida.
 
-[**Falar no WhatsApp agora →**](https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20guia%20de%20pre%C3%A7os%20e%20quero%20come%C3%A7ar%20meu%20projeto.)
+[**Falar no WhatsApp agora →**](https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20guia%20de%20pre%C3%A7os%20e%20quero%20come%C3%A7ar%20meu%20projeto.)

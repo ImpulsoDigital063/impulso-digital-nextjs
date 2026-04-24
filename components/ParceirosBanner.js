@@ -88,26 +88,26 @@ export default function ParceirosBanner() {
   const items = [...parceiros, ...parceiros];
 
   return (
-    <section className="py-12 bg-dark-card border-y border-dark-border overflow-hidden">
-      <p className="text-center text-gray-600 text-xs uppercase tracking-[0.2em] mb-10">
+    <section className="py-8 md:py-12 bg-dark-card border-y border-dark-border overflow-hidden">
+      <p className="text-center text-gray-600 text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-6 md:mb-10 px-5">
         Tecnologias que integram nossos projetos
       </p>
 
       <div className="relative">
         {/* Gradient fade nas bordas */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark-card to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark-card to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-dark-card to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-dark-card to-transparent z-10 pointer-events-none" />
 
         {/* Marquee */}
         <div className="flex" style={{ animation: "marquee 30s linear infinite" }}>
           {items.map((p, i) => (
             <div
               key={i}
-              className="flex items-center gap-4 mx-10 flex-shrink-0 group cursor-default"
+              className="flex items-center gap-3 sm:gap-4 mx-6 sm:mx-10 flex-shrink-0 group cursor-default"
             >
               {/* Ícone */}
               <div
-                className="w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
                 style={{
                   backgroundColor: p.cor + "15",
                   border: `1px solid ${p.cor}25`,
@@ -117,7 +117,7 @@ export default function ParceirosBanner() {
                 <span style={{ color: p.cor }}>{p.icon}</span>
               </div>
               {/* Nome */}
-              <span className="text-gray-500 font-semibold text-sm group-hover:text-white transition-colors duration-300 whitespace-nowrap">
+              <span className="text-gray-500 font-semibold text-xs sm:text-sm group-hover:text-white transition-colors duration-300 whitespace-nowrap">
                 {p.nome}
               </span>
             </div>

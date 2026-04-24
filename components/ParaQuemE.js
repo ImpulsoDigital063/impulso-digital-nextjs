@@ -33,30 +33,30 @@ const perfis = [
 
 export default function ParaQuemE() {
   return (
-    <section className="py-24 bg-dark relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-5 md:px-6">
         {/* Header */}
-        <div className="text-center mb-14">
-          <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">
+        <div className="text-center mb-10 md:mb-14">
+          <span className="sf inline-block text-primary font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3 md:mb-4">
             Para quem é
           </span>
-          <h2 className="section-title">
+          <h2 className="sf section-title">
             Você se{" "}
-            <span className="gradient-text">reconhece aqui?</span>
+            <span className="gradient-text-hybrid">reconhece aqui?</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="sf section-subtitle">
             Se um desses cenários é o seu, a Impulso Digital foi feita para você.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
           {perfis.map((p) => (
             <div
               key={p.titulo}
-              className="relative bg-dark-card border border-dark-border rounded-2xl p-6 flex flex-col gap-4 group hover:-translate-y-1 transition-all duration-300 hover:border-white/10"
+              className="sf relative bg-dark-card border border-dark-border rounded-2xl p-5 sm:p-6 flex flex-col gap-3 sm:gap-4 group hover:-translate-y-1 transition-all duration-300 hover:border-white/10"
             >
               {/* Linha colorida top */}
               <div

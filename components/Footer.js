@@ -1,4 +1,4 @@
-const WHATSAPP_URL = "https://wa.me/5599992065961";
+const WHATSAPP_URL = "https://wa.me/556392920080";
 
 const links = {
   Serviços: [
@@ -31,10 +31,10 @@ export default function Footer() {
   return (
     <footer className="bg-dark-card border-t border-dark-border">
       {/* Main footer */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+      <div className="container mx-auto px-5 md:px-6 py-12 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 md:gap-12">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="sf col-span-2 md:col-span-1">
             <div className="mb-5">
               <img src="/images/logo-navbar.svg" alt="Impulso Digital" className="h-10 w-auto" />
             </div>
@@ -63,9 +63,9 @@ export default function Footer() {
 
           {/* Links */}
           {Object.entries(links).map(([categoria, items]) => (
-            <div key={categoria}>
-              <h4 className="text-white font-semibold mb-5">{categoria}</h4>
-              <ul className="space-y-3">
+            <div key={categoria} className="sf">
+              <h4 className="text-white font-semibold mb-4 md:mb-5 text-sm sm:text-base">{categoria}</h4>
+              <ul className="space-y-2.5 sm:space-y-3">
                 {items.map((item) => (
                   <li key={item.label}>
                     <a
@@ -86,15 +86,15 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-dark-border">
-        <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <img src="/images/icon-32.png" alt="" className="w-5 h-5 opacity-40" />
-            <p className="text-gray-600 text-sm">
+        <div className="container mx-auto px-5 md:px-6 py-5 md:py-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
+          <div className="flex items-center gap-2 text-center md:text-left">
+            <img src="/images/icon-32.png" alt="" className="w-4 h-4 sm:w-5 sm:h-5 opacity-40 flex-shrink-0" />
+            <p className="text-gray-600 text-[11px] sm:text-sm">
               &copy; {ano} Impulso Digital. Todos os direitos reservados.{" "}
-              <span className="text-gray-700">CNPJ 64.585.949/0001-83</span>
+              <span className="text-gray-700 block sm:inline">CNPJ 64.585.949/0001-83</span>
             </p>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             <a
               href="/termos"
               className="text-gray-600 text-xs hover:text-gray-400 transition-colors"

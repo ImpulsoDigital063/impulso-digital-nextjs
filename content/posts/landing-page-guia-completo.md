@@ -244,7 +244,7 @@ A gente entrega sua landing page em 5 dias, com design exclusivo, copy estratég
 
 **A partir de R$499 — 50% na entrada, 50% na entrega.**
 
-[**Quero minha landing page agora →**](https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20artigo%20e%20quero%20saber%20sobre%20a%20landing%20page.)
+[**Quero minha landing page agora →**](https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20artigo%20e%20quero%20saber%20sobre%20a%20landing%20page.)
 
 ---
 
@@ -282,4 +282,4 @@ Você acabou de ler tudo que precisa saber para ter uma landing page que vende d
 
 Vagas limitadas para abril. Não deixe para amanhã o que pode gerar clientes ainda essa semana.
 
-[**Falar com especialista no WhatsApp →**](https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20guia%20completo%20de%20landing%20page%20e%20quero%20come%C3%A7ar%20meu%20projeto.)
+[**Falar com especialista no WhatsApp →**](https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20guia%20completo%20de%20landing%20page%20e%20quero%20come%C3%A7ar%20meu%20projeto.)

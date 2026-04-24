@@ -35,7 +35,7 @@ const pontos = [
 
 export default function Problema() {
   return (
-    <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Linha separadora top */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
 
@@ -44,33 +44,33 @@ export default function Problema() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-red-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
 
           {/* Label */}
-          <span className="inline-block text-red-400 font-semibold text-sm uppercase tracking-widest mb-6">
+          <span className="sf inline-block text-red-400 font-semibold text-xs sm:text-sm uppercase tracking-widest mb-5 md:mb-6">
             O Problema
           </span>
 
           {/* Título */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
+          <h2 className="sf text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-5 md:mb-6">
             Você trabalha duro.{" "}
             <span className="text-red-400">O cliente não te acha.</span>
           </h2>
 
           {/* Subtexto */}
-          <p className="text-gray-400 text-lg leading-relaxed mb-12">
+          <p className="sf text-gray-400 text-base sm:text-lg leading-relaxed mb-10 md:mb-12">
             Não é falta de esforço. É falta de estrutura.{" "}
             Todo dia, clientes prontos para comprar procuram o que você vende — e fecham com quem aparece primeiro.{" "}
             <span className="text-white font-semibold">Esse alguém poderia ser você.</span>
           </p>
 
           {/* Lista de pontos */}
-          <ul className="grid sm:grid-cols-2 gap-4 text-left mb-14">
+          <ul className="grid sm:grid-cols-2 gap-3 sm:gap-4 text-left mb-12 md:mb-14">
             {pontos.map((p) => (
               <li
                 key={p.texto}
-                className="flex items-start gap-4 bg-white/[0.03] border border-white/[0.06] rounded-xl px-5 py-4"
+                className="sf flex items-start gap-3 sm:gap-4 bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 sm:px-5 py-4"
               >
                 <span className="flex-shrink-0 w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 mt-0.5">
                   {p.icon}
@@ -83,7 +83,7 @@ export default function Problema() {
           </ul>
 
           {/* Parágrafo final */}
-          <p className="text-gray-500 text-base md:text-lg leading-relaxed border-t border-white/[0.06] pt-10">
+          <p className="sf text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed border-t border-white/[0.06] pt-8 md:pt-10">
             A virada não acontece quando você trabalha mais.{" "}
             <span className="text-white font-semibold">
               Acontece quando você para de depender do improviso e começa a ter uma estrutura que vende por você.

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function WhatsAppIcon() {
   return (
@@ -12,90 +12,188 @@ function WhatsAppIcon() {
 
 const cases = [
   {
+    id: 2,
+    categoria: "Landing Page",
+    titulo: "EV Suplementos Injetáveis",
+    url: "evsuplementosinjetaveis.com",
+    descricao:
+      "LP de farmacêutica em Palmas/TO — atendimento domiciliar e protocolos personalizados. Estrutura focada em captar avaliação gratuita via WhatsApp.",
+    resultado: "Canal ativo de captação via WhatsApp",
+    metricas: [
+      { label: "Entrega", valor: "5 dias" },
+      { label: "Stack", valor: "Next.js" },
+      { label: "CTA", valor: "WhatsApp" },
+    ],
+    cor: "#b91c1c",
+    tag: "Saúde",
+    imagens: [
+      "/cases/evsuplementos-novo-desktop-1.png",
+      "/cases/evsuplementos-novo-mobile-1.png",
+      "/cases/evsuplementos-novo-desktop-3.png",
+      "/cases/evsuplementos-novo-desktop-4.png",
+      "/cases/evsuplementos-novo-mobile-4.png",
+      "/cases/evsuplementos-novo-desktop-5.png",
+    ],
+  },
+  {
+    id: 3,
+    categoria: "Landing Page",
+    titulo: "Criativos do Céu",
+    url: "criativosdoceu.com",
+    descricao:
+      "LP de membership de templates editáveis para igrejas — venda recorrente via Kiwify em plano mensal/anual. Grid de artes com clima premium e CTA único.",
+    resultado: "Canal de venda recorrente ativo",
+    metricas: [
+      { label: "Entrega", valor: "6 dias" },
+      { label: "Stack", valor: "Next.js" },
+      { label: "Modelo", valor: "Assinatura" },
+    ],
+    cor: "#d4af37",
+    tag: "Igreja",
+    imagens: [
+      "/cases/criativosdoceu-desktop-1.png",
+      "/cases/criativosdoceu-mobile-1.png",
+      "/cases/criativosdoceu-desktop-2.png",
+      "/cases/criativosdoceu-mobile-2.png",
+      "/cases/criativosdoceu-desktop-3.png",
+      "/cases/criativosdoceu-desktop-4.png",
+    ],
+  },
+  {
     id: 1,
     categoria: "Loja Shopify",
     titulo: "GB Nutrition",
+    url: "gbnutrition.online",
     descricao:
-      "Loja Shopify com estrutura completa de vendas: catálogo otimizado, checkout integrado via Yampi e foco total em conversão mobile.",
+      "Loja completa com catálogo, carrinho inteligente, checkout Yampi e frete calculado via Melhor Envio. Cliente fecha sem sair da loja.",
     resultado: "Loja no ar e vendendo em 7 dias",
     metricas: [
-      { label: "Prazo de entrega", valor: "7 dias" },
+      { label: "Entrega", valor: "7 dias" },
       { label: "Plataforma", valor: "Shopify" },
       { label: "Checkout", valor: "Yampi" },
     ],
     cor: "#10b981",
     tag: "Suplementos",
     imagens: [
-      "/cases/gbnutrition-1.png",
-      "/cases/gbnutrition-2.png",
+      "/cases/gbnutrition-novo-desktop-1.png",
+      "/cases/gbnutrition-novo-desktop-3.png",
+      "/cases/gbnutrition-novo-flow-desktop-pdp.png",
+      "/cases/gbnutrition-novo-flow-desktop-carrinho.png",
+      "/cases/gbnutrition-novo-flow-desktop-checkout.png",
+      "/cases/gbnutrition-novo-mobile-1.png",
+      "/cases/gbnutrition-novo-flow-mobile-pdp.png",
     ],
   },
   {
-    id: 2,
-    categoria: "Landing Page",
-    titulo: "EV Suplementos Injetáveis",
+    id: 4,
+    categoria: "SaaS Next.js",
+    titulo: "AgendaPRO",
+    url: "agendapro.net.br",
     descricao:
-      "Landing page de alta conversão para captação de clientes via WhatsApp. Estrutura focada em gerar contato direto e fechar vendas.",
-    resultado: "Canal de captação ativo via WhatsApp",
+      "Sistema completo de agenda para barbearia: painel do dono, agendamento público do cliente com pontos e painel do profissional comissionado com comissão calculada automática.",
+    resultado: "3 painéis, 1 sistema — rodando em produção",
     metricas: [
-      { label: "Prazo de entrega", valor: "5 dias" },
       { label: "Stack", valor: "Next.js" },
-      { label: "CTA", valor: "WhatsApp" },
+      { label: "Painéis", valor: "3" },
+      { label: "Pontos", valor: "Nativos" },
     ],
-    cor: "#ff6b35",
-    tag: "Suplementos",
+    cor: "#3b82f6",
+    tag: "Barbearia",
     imagens: [
-      "/cases/evsuplementos-1.png",
-      "/cases/evsuplementos-2.png",
+      "/cases/agendapro-admin-agenda-desktop.png",
+      "/cases/agendapro-admin-financeiro-desktop.png",
+      "/cases/agendapro-admin-clientes-desktop.png",
+      "/cases/agendapro-cliente-lp-desktop.png",
+      "/cases/agendapro-cliente-agendar-4-horario-desktop-selecionado.png",
+      "/cases/agendapro-cliente-pontos-desktop.png",
+      "/cases/agendapro-admin-config-desktop.png",
+      "/cases/agendapro-cliente-lp-mobile.png",
     ],
   },
 ];
 
 function CaseCard({ c }) {
   const [activeImg, setActiveImg] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const cardRef = useRef(null);
 
   const prev = () => setActiveImg((i) => (i === 0 ? c.imagens.length - 1 : i - 1));
   const next = () => setActiveImg((i) => (i === c.imagens.length - 1 ? 0 : i + 1));
 
+  // Autoplay: avança 1 slide a cada 3s, pausa no hover e quando fora do viewport
+  useEffect(() => {
+    if (isPaused) return;
+    const id = setInterval(() => {
+      setActiveImg((i) => (i === c.imagens.length - 1 ? 0 : i + 1));
+    }, 3000);
+    return () => clearInterval(id);
+  }, [isPaused, c.imagens.length]);
+
+  // Pausa carrossel quando o card sai do viewport (economia + sincronia ao voltar)
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => setIsPaused((p) => (entry.isIntersecting ? false : true)),
+      { threshold: 0.2 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div
-      className="bg-dark border border-dark-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group"
+      ref={cardRef}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      className="bg-dark border border-dark-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 group"
     >
-      {/* Image gallery */}
-      <div className="relative h-56 overflow-hidden bg-dark-card">
-        <img
-          src={c.imagens[activeImg]}
-          alt={`${c.titulo} — imagem ${activeImg + 1}`}
-          className="w-full h-full object-cover transition-opacity duration-300"
-        />
+      {/* Image gallery — fade transition */}
+      <div className="relative h-64 sm:h-72 overflow-hidden bg-dark-card">
+        {c.imagens.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`${c.titulo} — print ${i + 1}`}
+            loading={i === 0 ? "eager" : "lazy"}
+            className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ease-out ${
+              i === activeImg ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+
+        {/* Gradiente top pra tags destacarem */}
+        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
 
         {/* Prev / Next */}
         <button
           onClick={prev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-black/50 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-colors"
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/60 hover:bg-black/90 rounded-full flex items-center justify-center text-white transition-colors opacity-0 group-hover:opacity-100"
           aria-label="Imagem anterior"
         >
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <button
           onClick={next}
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-black/50 hover:bg-black/80 rounded-full flex items-center justify-center text-white transition-colors"
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/60 hover:bg-black/90 rounded-full flex items-center justify-center text-white transition-colors opacity-0 group-hover:opacity-100"
           aria-label="Próxima imagem"
         >
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
-        {/* Dot indicators */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {/* Progress dots + contador */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
           {c.imagens.map((_, i) => (
             <button
               key={i}
               onClick={() => setActiveImg(i)}
-              className={`w-1.5 h-1.5 rounded-full transition-all ${i === activeImg ? "bg-white scale-125" : "bg-white/40"}`}
+              className={`h-1 rounded-full transition-all duration-300 ${
+                i === activeImg ? "bg-white w-6" : "bg-white/40 w-1.5 hover:bg-white/70"
+              }`}
               aria-label={`Ir para imagem ${i + 1}`}
             />
           ))}
@@ -103,19 +201,22 @@ function CaseCard({ c }) {
 
         {/* Tags */}
         <div
-          className="absolute top-3 left-3 text-xs font-bold px-3 py-1.5 rounded-full"
+          className="absolute top-3 left-3 text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm"
           style={{ backgroundColor: c.cor + "33", color: c.cor, border: `1px solid ${c.cor}55` }}
         >
           {c.tag}
         </div>
-        <div className="absolute top-3 right-3 text-xs font-medium px-3 py-1.5 rounded-full bg-dark/80 text-gray-300 backdrop-blur-sm">
+        <div className="absolute top-3 right-3 text-xs font-medium px-3 py-1.5 rounded-full bg-dark/80 text-gray-200 backdrop-blur-sm">
           {c.categoria}
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-lg font-bold text-white mb-2">{c.titulo}</h3>
+      <div className="p-5 sm:p-6">
+        <div className="flex items-baseline justify-between gap-3 mb-2">
+          <h3 className="text-base sm:text-lg font-bold text-white">{c.titulo}</h3>
+          <span className="text-[11px] text-gray-600 font-medium truncate max-w-[45%]">{c.url}</span>
+        </div>
         <p className="text-gray-400 text-sm leading-relaxed mb-5">{c.descricao}</p>
 
         {/* Result highlight */}
@@ -144,58 +245,60 @@ function CaseCard({ c }) {
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-dark-card relative">
+    <section id="portfolio" className="py-16 md:py-24 bg-dark-card relative">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-5 md:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-1">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="sf flex items-center justify-center gap-2 mb-1">
             <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
-            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Cases de Sucesso</span>
+            <span className="text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest">Cases de Sucesso</span>
             <img src="/images/icon-32.png" alt="" className="w-4 h-4 opacity-70" />
           </div>
-          <h2 className="section-title mt-3">
+          <h2 className="sf section-title mt-3">
             Negócios que{" "}
-            <span className="gradient-text">deram o impulso.</span>
+            <span className="gradient-text-hybrid">deram o impulso.</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="sf section-subtitle">
             Casos reais de empreendedores que pararam de depender do improviso.{" "}
             <span className="text-white font-semibold">O próximo pode ser o seu.</span>
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6 lg:gap-7 max-w-7xl mx-auto">
           {cases.map((c) => (
-            <CaseCard key={c.id} c={c} />
+            <div key={c.id} className="sf">
+              <CaseCard c={c} />
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-14">
-          <div className="inline-flex items-center gap-3 bg-dark border border-dark-border rounded-2xl px-8 py-5 mb-8">
-            <span className="text-3xl font-black gradient-text">60+</span>
+        <div className="sf text-center mt-12 md:mt-14">
+          <div className="inline-flex items-center gap-3 bg-dark border border-dark-border rounded-2xl px-6 sm:px-8 py-4 sm:py-5 mb-6 md:mb-8">
+            <span className="text-2xl sm:text-3xl font-black gradient-text-hybrid">60+</span>
             <div className="text-left">
-              <p className="text-white text-sm font-semibold">negócios já deram o impulso</p>
-              <p className="text-gray-500 text-xs">o próximo pode ser o seu</p>
+              <p className="text-white text-xs sm:text-sm font-semibold">negócios já deram o impulso</p>
+              <p className="text-gray-500 text-[11px] sm:text-xs">o próximo pode ser o seu</p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
-              href="https://wa.me/5599992065961?text=Quero%20ver%20mais%20cases%20da%20Impulso%20Digital"
+              href="https://wa.me/556392920080?text=Quero%20ver%20mais%20cases%20da%20Impulso%20Digital"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline"
+              className="btn-outline justify-center"
             >
               Ver mais projetos
             </a>
             <a
-              href="https://wa.me/5599992065961?text=Quero%20iniciar%20meu%20projeto"
+              href="https://wa.me/556392920080?text=Quero%20iniciar%20meu%20projeto"
               target="_blank"
               rel="noopener noreferrer"
-              className="whatsapp-btn"
+              className="whatsapp-btn justify-center"
             >
               <WhatsAppIcon />
               Quero resultado assim

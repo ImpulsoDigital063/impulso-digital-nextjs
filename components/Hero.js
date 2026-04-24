@@ -1,6 +1,8 @@
 "use client";
 
-const WHATSAPP_NUMBER = "5599992065961";
+import { useCounterOnView } from "@/hooks/useCounterOnView";
+
+const WHATSAPP_NUMBER = "556392920080";
 const WHATSAPP_MSG = encodeURIComponent(
   "Olá! Vim pelo site e quero saber mais sobre os serviços da Impulso Digital."
 );
@@ -8,7 +10,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-end md:items-center overflow-hidden bg-dark">
+    <section className="relative min-h-screen flex items-end md:items-center overflow-hidden">
       {/* ── DESKTOP: foto na metade direita ── */}
       <div className="hidden md:block absolute right-0 top-0 w-[58%] h-full pointer-events-none">
         <img src="/images/foto-eduardo.jpg" alt="" className="w-full h-full object-cover object-top" />
@@ -46,39 +48,39 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 container mx-auto px-6 pt-[48vh] pb-12 md:py-32">
-        <div className="max-w-xl animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+      <div className="relative z-10 container mx-auto px-5 md:px-6 pt-[44vh] sm:pt-[48vh] pb-10 md:py-32">
+        <div className="max-w-xl">
+            <h1 className="sf text-[2.1rem] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6">
               Seu negócio merece{" "}
-              <span className="gradient-text">ser encontrado.</span>
+              <span className="gradient-text-hybrid">ser encontrado.</span>
             </h1>
 
-            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+            <p className="sf text-gray-400 text-base sm:text-lg md:text-xl leading-relaxed mb-6 md:mb-8 max-w-lg">
               Enquanto você vende pelo Instagram, pelo WhatsApp ou depende do movimento da loja física,{" "}
               <span className="text-white font-semibold">seu concorrente está sendo encontrado no Google — e fechando vendas enquanto dorme.</span>
             </p>
 
             {/* Service chips */}
-            <div className="flex flex-wrap gap-2 mb-10">
+            <div className="sf flex flex-wrap gap-1.5 sm:gap-2 mb-8 md:mb-10">
               {[
                 "Landing Page",
-                "Loja Online",
-                "Site Institucional",
+                "Loja Shopify",
+                "Site Next.js",
                 "Consultoria",
               ].map((s) => (
                 <span
                   key={s}
-                  className="text-xs font-medium px-3 py-1.5 rounded-full bg-dark-card border border-dark-border text-gray-400"
+                  className="text-[11px] sm:text-xs font-medium px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-dark-card border border-dark-border text-gray-400"
                 >
                   {s}
                 </span>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="whatsapp-btn text-center justify-center">
+            <div className="sf flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="neon-btn text-center">
                 <WhatsAppIcon />
-                Quero meu impulso digital
+                Quero garantir minha vaga
               </a>
               <a href="#servicos" className="btn-outline text-center justify-center">
                 Ver como funciona
@@ -86,19 +88,13 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-14 pt-10 border-t border-dark-border">
+            <div className="sf grid grid-cols-3 gap-3 sm:gap-4 mt-10 md:mt-14 pt-8 md:pt-10 border-t border-dark-border">
               {[
                 { value: "60+", label: "Negócios impulsionados", sub: "e crescendo" },
                 { value: "7 dias", label: "Média de entrega", sub: "do briefing ao ar" },
                 { value: "R$0", label: "Mensalidade", sub: "de plataforma" },
               ].map((stat) => (
-                <div key={stat.label} className="group">
-                  <div className="text-3xl md:text-4xl font-black gradient-text leading-none">
-                    {stat.value}
-                  </div>
-                  <div className="text-white text-xs font-semibold mt-1">{stat.label}</div>
-                  <div className="text-gray-600 text-[11px] mt-0.5">{stat.sub}</div>
-                </div>
+                <HeroStat key={stat.label} stat={stat} />
               ))}
             </div>
         </div>
@@ -124,6 +120,19 @@ export default function Hero() {
         ))}
       </div>
     </section>
+  );
+}
+
+function HeroStat({ stat }) {
+  const { ref, display } = useCounterOnView(stat.value);
+  return (
+    <div className="group">
+      <div ref={ref} className="text-2xl sm:text-3xl md:text-4xl font-black gradient-text-hybrid leading-none tabular-nums">
+        {display}
+      </div>
+      <div className="text-white text-[11px] sm:text-xs font-semibold mt-1 leading-tight">{stat.label}</div>
+      <div className="text-gray-600 text-[10px] sm:text-[11px] mt-0.5 leading-tight">{stat.sub}</div>
+    </div>
   );
 }
 

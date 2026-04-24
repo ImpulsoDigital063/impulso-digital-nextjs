@@ -2,31 +2,66 @@
 
 import { useState } from "react";
 
+const Bold = ({ children }) => (
+  <span className="text-white font-semibold">{children}</span>
+);
+
 const perguntas = [
   {
-    pergunta: "Quanto tempo leva para o meu site ficar pronto?",
-    resposta:
-      "Landing pages ficam prontas em até 5 dias úteis após o envio de todo o material (logo, textos e imagens). Lojas online levam de 7 a 10 dias úteis. Para projetos personalizados, o prazo é combinado na consulta inicial.",
+    pergunta: "Por que você e não uma agência maior?",
+    resposta: (
+      <>
+        Agência grande trata seu projeto como 1 de 200 na fila — você manda e-mail e espera 3 dias. Aqui você fala direto comigo no WhatsApp, e é o mesmo número durante o projeto, na entrega e 3 meses depois se der pau. <Bold>Quem te responde é quem digita o código.</Bold> Sem "departamento de sucesso do cliente" pra enrolar.
+      </>
+    ),
   },
   {
-    pergunta: "Preciso ter domínio e hospedagem para contratar?",
-    resposta:
-      "Não! Todos os nossos planos já incluem 1 ano de hospedagem gratuita e configuração do domínio. Você só precisa adquirir o domínio (.com.br custa cerca de R$40/ano) — nós cuidamos de tudo o mais.",
+    pergunta: "Por que não fazer no Wix, Canva ou alguma IA grátis?",
+    resposta: (
+      <>
+        Usa. Se resolver, ótimo — você economizou. Mas já refiz 12 sites de cliente que vieram do Wix achando que ia dar conta. O problema não é a ferramenta, é o tempo que você gasta aprendendo a mexer — é o mesmo tempo que seu concorrente gasta vendendo. <Bold>Seu tempo de dono vale mais que R$59/mês de Wix.</Bold>
+      </>
+    ),
   },
   {
-    pergunta: "Como funciona o processo de pagamento?",
-    resposta:
-      "Trabalhamos com 50% de entrada para iniciar o projeto e 50% na entrega final. Aceitamos Pix, cartão de crédito (em até 3x sem juros) e boleto bancário. Após a aprovação, o projeto entra na fila de produção.",
+    pergunta: "E se eu não gostar do resultado?",
+    resposta: (
+      <>
+        Não chega nesse ponto. No Dia 1-3 você recebe prévia visual — paleta, tipografia, mapa das páginas — <Bold>antes de eu escrever uma linha de código.</Bold> Se não for a cara do seu negócio, devolvo os 50% e a gente encerra sem drama. Depois que aprovar a prévia, são 3 rodadas de revisão durante a construção. Site só vai ao ar com seu OK final.
+      </>
+    ),
   },
   {
-    pergunta: "Posso solicitar alterações depois da entrega?",
-    resposta:
-      "Sim! Todos os projetos incluem até 3 rodadas de revisão durante o desenvolvimento. Após a entrega, oferecemos 30 dias de suporte gratuito para pequenos ajustes. Para alterações maiores, temos planos de manutenção mensal.",
+    pergunta: "Vou conseguir mexer sozinho depois? E se você sumir?",
+    resposta: (
+      <>
+        Depende do serviço. Na <Bold>Loja Shopify</Bold>, você tem controle total — painel no seu nome, adiciona produto, edita preço, troca foto sem depender de mim. Entrega vem com treinamento em vídeo pra você mexer sem medo. Na <Bold>Landing Page</Bold>, o modelo é outro: LP é feita sob medida pra converter, não pra ser editada por leigo. Nos 30 dias após a entrega, qualquer alteração de texto, imagem ou seção eu faço sem cobrar — depois disso, se quiser mexer de novo, contratação pontual (mais barato que quebrar a LP tentando editar sozinho). Em qualquer cenário, <Bold>código, domínio e estrutura ficam no seu nome.</Bold> Se eu sumir amanhã, qualquer dev pega onde parei — uso Next.js e Shopify padrão, sem gambiarra proprietária.
+      </>
+    ),
   },
   {
-    pergunta: "O site vai aparecer no Google?",
-    resposta:
-      "Todos os projetos incluem SEO técnico básico: meta tags, sitemap, robots.txt, velocidade otimizada e integração com Google Search Console. Para resultados avançados em SEO, recomendamos nossa consultoria estratégica.",
+    pergunta: "Tem custo escondido? Mensalidade?",
+    resposta: (
+      <>
+        Zero mensalidade minha. Você paga uma vez e acabou. <Bold>Zero percentual sobre suas vendas.</Bold> Em outros devs é comum pagar mensalidade pro site continuar no ar — aqui, na <Bold>Landing Page</Bold>, a hospedagem é vitalícia de graça como bônus de lançamento (R$49,90/mês pra quem entrar depois, mas <Bold>quem contrata agora fica isento pra sempre</Bold>). O domínio (R$40-100/ano) você registra no seu nome e é seu pra sempre. Na <Bold>Loja Shopify</Bold>, são US$1/mês nos 3 primeiros meses, depois US$19/mês (direto com a Shopify, no seu cartão). Yampi e Melhor Envio entram sem mensalidade. Nenhum centavo volta pra mim depois da entrega.
+      </>
+    ),
+  },
+  {
+    pergunta: "Em quanto tempo o site paga?",
+    resposta: (
+      <>
+        <Bold>Quem promete prazo de retorno tá mentindo.</Bold> Não controlo seu produto, seu preço, seu tráfego nem seu atendimento. Entrego o que depende de mim: site rápido, claro, que converte quando o lead chega. Se você já vende no Instagram ou WhatsApp, o site multiplica isso. Se não vende ali também, nenhum site salva — e nessa hipótese a gente conversa antes de começar pra eu não te vender o que não vai resolver.
+      </>
+    ),
+  },
+  {
+    pergunta: "E se eu desistir no meio do projeto?",
+    resposta: (
+      <>
+        Regra clara desde o WhatsApp: 50% na entrada pra começar. Se desistir <Bold>antes de aprovar a prévia visual</Bold> (Dia 1-3), devolvo 100%. Se desistir <Bold>depois da aprovação</Bold> e a gente já estiver construindo, o que foi produzido é cobrado proporcional e você leva os arquivos. Nada de multa escondida, nada de "ah mas você assinou no contrato" — tá tudo na proposta, você lê antes de pagar.
+      </>
+    ),
   },
 ];
 
@@ -36,21 +71,22 @@ export default function FAQ() {
   const toggle = (idx) => setAberto(aberto === idx ? null : idx);
 
   return (
-    <section id="faq" className="py-24 bg-dark relative">
+    <section id="faq" className="py-16 md:py-24 relative">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-5 md:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">
-            Dúvidas Frequentes
+        <div className="text-center mb-12 md:mb-16">
+          <span className="sf text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest">
+            Últimas objeções
           </span>
-          <h2 className="section-title mt-3">
-            Ainda tem <span className="gradient-text">dúvidas?</span>
+          <h2 className="sf section-title mt-3">
+            Suas últimas dúvidas{" "}
+            <span className="gradient-text-hybrid">antes de fechar.</span>
           </h2>
-          <p className="section-subtitle">
-            Respondemos as perguntas mais comuns dos nossos clientes. Não
-            encontrou o que procura? Fale conosco no WhatsApp.
+          <p className="sf section-subtitle">
+            Essas são as objeções que aparecem toda semana no WhatsApp. Melhor
+            resolver aqui e entrar na conversa já pronto pra fechar.
           </p>
         </div>
 
@@ -68,12 +104,12 @@ export default function FAQ() {
               {/* Question */}
               <button
                 onClick={() => toggle(idx)}
-                className="w-full flex items-center justify-between p-6 text-left gap-4 group"
+                className="w-full flex items-center justify-between p-4 sm:p-6 text-left gap-3 sm:gap-4 group"
                 aria-expanded={aberto === idx}
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
                   <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${
+                    className={`flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold transition-colors duration-300 ${
                       aberto === idx
                         ? "bg-primary text-white"
                         : "bg-dark-border text-gray-500 group-hover:bg-primary/20 group-hover:text-primary-light"
@@ -82,7 +118,7 @@ export default function FAQ() {
                     {idx + 1}
                   </span>
                   <span
-                    className={`font-semibold text-base transition-colors duration-300 ${
+                    className={`font-semibold text-sm sm:text-base leading-snug transition-colors duration-300 ${
                       aberto === idx ? "text-white" : "text-gray-300"
                     }`}
                   >
@@ -96,7 +132,7 @@ export default function FAQ() {
               <div
                 className={`accordion-content ${aberto === idx ? "open" : ""}`}
               >
-                <div className="px-6 pb-6 pl-[4.5rem]">
+                <div className="px-4 sm:px-6 pb-5 sm:pb-6 pl-[3.4rem] sm:pl-[4.5rem]">
                   <p className="text-gray-400 leading-relaxed text-sm md:text-base">
                     {item.resposta}
                   </p>
@@ -107,18 +143,18 @@ export default function FAQ() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-14">
-          <p className="text-gray-500 mb-4 text-sm">
-            Não encontrou sua resposta?
+        <div className="sf text-center mt-12 md:mt-14">
+          <p className="text-gray-400 mb-4 text-sm">
+            Tudo respondido? O próximo passo é fechar.
           </p>
           <a
-            href="https://wa.me/5599992065961?text=Tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os%20da%20Impulso%20Digital"
+            href="https://wa.me/556392920080?text=Li%20tudo%20no%20site%20e%20quero%20come%C3%A7ar%20meu%20projeto%20com%20a%20Impulso%20Digital."
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-btn"
           >
             <WhatsAppIcon />
-            Perguntar no WhatsApp
+            Começar meu projeto
           </a>
         </div>
       </div>

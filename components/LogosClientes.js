@@ -19,15 +19,15 @@ export default function LogosClientes() {
   const items = [...clientes, ...clientes];
 
   return (
-    <section className="py-14 bg-dark-card border-y border-dark-border overflow-hidden">
-      <p className="text-center text-gray-600 text-xs uppercase tracking-[0.2em] mb-10">
+    <section className="py-10 md:py-14 bg-dark-card border-y border-dark-border overflow-hidden">
+      <p className="text-center text-gray-600 text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-6 md:mb-10 px-5">
         Negócios que já deram o impulso
       </p>
 
       <div className="relative">
         {/* Gradient fade nas bordas */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-dark-card to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-dark-card to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-dark-card to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-dark-card to-transparent z-10 pointer-events-none" />
 
         {/* Marquee — direção oposta ao de parceiros */}
         <div
@@ -37,11 +37,11 @@ export default function LogosClientes() {
           {items.map((c, i) => (
             <div
               key={i}
-              className="flex items-center gap-4 mx-8 flex-shrink-0 group cursor-default"
+              className="flex items-center gap-3 sm:gap-4 mx-5 sm:mx-8 flex-shrink-0 group cursor-default"
             >
               {/* Monograma */}
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
                 style={{
                   backgroundColor: c.cor + "12",
                   border: `1px solid ${c.cor}30`,
@@ -57,7 +57,7 @@ export default function LogosClientes() {
               </div>
 
               {/* Nome */}
-              <span className="text-gray-600 font-semibold text-sm group-hover:text-white transition-colors duration-300 whitespace-nowrap">
+              <span className="text-gray-600 font-semibold text-xs sm:text-sm group-hover:text-white transition-colors duration-300 whitespace-nowrap">
                 {c.nome}
               </span>
             </div>

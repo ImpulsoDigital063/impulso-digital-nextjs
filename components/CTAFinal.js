@@ -1,59 +1,59 @@
 "use client";
 
 const WHATSAPP_URL =
-  "https://wa.me/5599992065961?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20estruturar%20meu%20neg%C3%B3cio%20para%20vender%20todos%20os%20dias.%20Pode%20me%20ajudar%3F";
+  "https://wa.me/556392920080?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20garantir%20minha%20vaga%20na%20Impulso%20Digital.";
 
 export default function CTAFinal() {
   return (
-    <section className="py-24 bg-dark relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-2xl" />
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-accent-cyan/10 rounded-full blur-2xl" />
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-2xl" />
       </div>
 
       {/* Top divider */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-5 md:px-6 text-center">
         {/* Urgency strip */}
-        <div className="inline-flex items-center gap-3 bg-red-500/10 border border-red-500/20 rounded-full px-5 py-2.5 mb-10">
+        <div className="sf inline-flex items-center gap-2 sm:gap-3 bg-red-500/10 border border-red-500/20 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 mb-8 md:mb-10 max-w-full">
           <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse flex-shrink-0" />
-          <span className="text-red-400 text-sm font-semibold">
-            Vagas limitadas: apenas 3 projetos novos em abril — 1 já reservada
+          <span className="text-red-400 text-xs sm:text-sm font-semibold leading-tight">
+            3 vagas em abril — 1 já reservada
           </span>
         </div>
 
         {/* Headline */}
-        <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+        <h2 className="sf text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5 md:mb-6 leading-tight">
           Pronto para dar o seu{" "}
-          <span className="gradient-text">impulso digital?</span>
+          <span className="gradient-text-hybrid">impulso digital?</span>
         </h2>
 
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="sf text-gray-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed">
           Mais de 60 empreendedores já confiaram na Impulso Digital para existir online.{" "}
           <span className="text-white font-semibold">O nosso melhor trabalho é sempre o próximo — e o próximo pode ser o seu.</span>
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-14">
+        <div className="sf flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mb-12 md:mb-14">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="whatsapp-btn text-base px-10"
+            className="neon-btn text-sm sm:text-base px-6 sm:px-10"
           >
             <WhatsAppIcon />
-            Quero estrutura para vender todos os dias
+            Quero garantir minha vaga
           </a>
-          <a href="#servicos" className="btn-outline text-base px-10">
+          <a href="#servicos" className="btn-outline text-sm sm:text-base px-6 sm:px-10 justify-center">
             Ver quanto custa
           </a>
         </div>
 
         {/* Trust indicators */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        <div className="sf flex flex-wrap items-center justify-center gap-x-5 gap-y-3 md:gap-10">
           {[
             {
               icon: (

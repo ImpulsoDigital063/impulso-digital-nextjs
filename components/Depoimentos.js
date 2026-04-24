@@ -42,7 +42,7 @@ const trustStats = [
 
 export default function Depoimentos() {
   return (
-    <section id="depoimentos" className="py-24 bg-dark relative overflow-hidden">
+    <section id="depoimentos" className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -50,28 +50,28 @@ export default function Depoimentos() {
         <div className="absolute top-20 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-5 md:px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-accent font-semibold text-sm uppercase tracking-widest">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="sf text-accent font-semibold text-xs sm:text-sm uppercase tracking-widest">
             Depoimentos
           </span>
-          <h2 className="section-title mt-3">
+          <h2 className="sf section-title mt-3">
             O que nossos{" "}
-            <span className="gradient-text">clientes dizem</span>
+            <span className="gradient-text-hybrid">clientes dizem</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="sf section-subtitle">
             Mais de 60 empreendedores já deram o impulso digital que faltava.
             Veja histórias reais de quem deu o próximo passo.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-5 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
           {depoimentos.map((d, idx) => (
             <div
               key={idx}
-              className="bg-dark-card border border-dark-border rounded-2xl p-7 flex flex-col gap-5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 group"
+              className="sf bg-dark-card border border-dark-border rounded-2xl p-5 sm:p-6 md:p-7 flex flex-col gap-4 sm:gap-5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/30 group"
             >
               {/* Stars */}
               <div className="flex gap-1">
@@ -133,13 +133,13 @@ export default function Depoimentos() {
         </div>
 
         {/* Trust stats bar */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto text-center">
+        <div className="sf mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 max-w-3xl mx-auto text-center">
           {trustStats.map((item) => (
             <div key={item.label}>
-              <div className="text-2xl md:text-3xl font-black gradient-text">
+              <div className="text-xl sm:text-2xl md:text-3xl font-black gradient-text-hybrid">
                 {item.value}
               </div>
-              <div className="text-gray-500 text-xs mt-1">{item.label}</div>
+              <div className="text-gray-500 text-[11px] sm:text-xs mt-1">{item.label}</div>
             </div>
           ))}
         </div>

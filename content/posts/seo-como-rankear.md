@@ -425,7 +425,7 @@ A Impulso Digital oferece uma **análise gratuita** do seu site — identificamo
 
 Sem compromisso. Sem enrolação. Uma conversa no WhatsApp de 20 minutos já muda sua visão sobre o que precisa ser feito.
 
-[**Solicitar auditoria SEO gratuita →**](https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20guia%20de%20SEO%20e%20quero%20uma%20auditoria%20gratuita%20do%20meu%20site.)
+[**Solicitar auditoria SEO gratuita →**](https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20guia%20de%20SEO%20e%20quero%20uma%20auditoria%20gratuita%20do%20meu%20site.)
 
 ---
 
@@ -463,4 +463,4 @@ Você acabou de ler o guia técnico de SEO mais completo para pequenos negócios
 
 A auditoria é gratuita. A conversa é sem compromisso. O resultado pode ser o maior canal de aquisição de clientes que o seu negócio já teve.
 
-[**Falar com especialista no WhatsApp →**](https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20guia%20de%20SEO%202026%20e%20quero%20saber%20como%20rankear%20meu%20site.)
+[**Falar com especialista no WhatsApp →**](https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20guia%20de%20SEO%202026%20e%20quero%20saber%20como%20rankear%20meu%20site.)

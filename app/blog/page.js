@@ -103,7 +103,7 @@ export default function BlogPage() {
               Transforme seu negócio com um site que converte
             </h3>
             <a
-              href="https://wa.me/5599992065961?text=Ol%C3%A1!%20Li%20o%20blog%20e%20quero%20saber%20mais."
+              href="https://wa.me/556392920080?text=Ol%C3%A1!%20Li%20o%20blog%20e%20quero%20saber%20mais."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-8 py-3.5 rounded-full transition-all duration-200 hover:scale-105"
